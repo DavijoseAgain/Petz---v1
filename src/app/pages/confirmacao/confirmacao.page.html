@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Confirmação</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="confirmacao-container">
+
+    <p class="confirm-text">Agendamento confirmado!</p>
+
+    <!-- Imagens lado a lado -->
+    <div style="display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 16px;">
+      <ion-avatar>
+  <ion-img [src]="shopLogo"></ion-img>
+</ion-avatar>
+<ion-avatar>
+  <ion-img [src]="petFoto"></ion-img>
+</ion-avatar>
+
+    </div>
+
+    <p class="confirm-details">
+      Petshop: <strong>{{ shopName }}</strong><br/>
+      Serviço: <strong>{{ service }}</strong><br/>
+      Data: <strong>{{ selectedDate }}</strong><br/>
+      Horário: <strong>{{ selectedTime }}</strong>
+    </p>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <ion-button fill="clear" slot="start" routerLink="/pet-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" slot="end" routerLink="/shop-list">
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

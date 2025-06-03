@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Marcar em {{ shopName }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="marcar-container">
+   <div class="shop-info">
+  <ion-avatar *ngIf="shopLogo" slot="start">
+    <ion-img [src]="shopLogo"></ion-img>
+  </ion-avatar>
+  {{ shopName }}
+</div>
+
+    <p class="prompt">Qual serviço você tem em mente?</p>
+
+    <div class="buttons-group">
+      <ion-button expand="block" fill="solid" class="btn-service" (click)="choose('Banho')">
+        Banhos
+      </ion-button>
+      <ion-button expand="block" fill="solid" class="btn-service" (click)="choose('Banho e Tosa')">
+        Banho e Tosa
+      </ion-button>
+      <ion-button expand="block" fill="solid" class="btn-service" (click)="choose('Consulta')">
+        Consultas
+      </ion-button>
+      <ion-button expand="block" fill="solid" class="btn-service" (click)="choose('Vacina')">
+        Vacinas
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <!-- Slot "start" empurra para a esquerda -->
+    <ion-button fill="clear" slot="start" routerLink="/pet-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+
+    <!-- Slot padrão (sem slot) fica automaticamente no centro -->
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+
+    <!-- Slot "end" empurra para a direita -->
+    <ion-button fill="clear" slot="end" >
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

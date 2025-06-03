@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Horários</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="horario-container">
+    <div class="shop-info">
+  <ion-avatar *ngIf="shopLogo" slot="start">
+    <ion-img [src]="shopLogo"></ion-img>
+  </ion-avatar>
+  {{ shopName }} – {{ service }}
+</div>
+
+    <p class="prompt">Escolha um horário:</p>
+
+    <div class="times-grid">
+      <ion-button
+        *ngFor="let t of times"
+        fill="outline"
+        class="time-slot"
+        (click)="selectTime(t)"
+      >
+        {{ t }}
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <!-- Slot "start" empurra para a esquerda -->
+    <ion-button fill="clear" slot="start" routerLink="/pet-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+
+    <!-- Slot padrão (sem slot) fica automaticamente no centro -->
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+
+    <!-- Slot "end" empurra para a direita -->
+    <ion-button fill="clear" slot="end" >
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

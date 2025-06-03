@@ -1,0 +1,61 @@
+<!-- src/app/pages/escolha/escolha.page.html -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Selecione o PET</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="escolha-container">
+    <div class="shop-info">
+      <!-- Agora usamos binding: [src]="shopIconUrl" -->
+      <ion-avatar slot="start" class="shop-avatar">
+        <ion-img [src]="shopIconUrl"></ion-img>
+      </ion-avatar>
+      <span class="shop-name">{{ shopName }}</span>
+    </div>
+
+    <p class="prompt">Selecione o PET que deseja:</p>
+
+    <div class="pets-grid">
+      <ion-card
+        *ngFor="let pet of pets"
+        class="pet-card"
+        button
+        (click)="escolhePet(pet)"
+      >
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <ion-img [src]="pet.foto" class="pet-image"></ion-img>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{ pet.nome }}</h2>
+            <p>{{ pet.tipo }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <ion-button fill="clear" slot="start" routerLink="/shop-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" slot="end" routerLink="/shop-list">
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Meus Agendamentos</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="pet-list" *ngIf="appointments.length > 0; else semDados">
+    <ion-card *ngFor="let app of appointments; let i = index" class="pet-card">
+      <ion-item lines="none">
+        <ion-avatar slot="start">
+          <ion-img [src]="app.petFoto" class="pet-image"></ion-img>
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ app.petName }}</h2>
+          <p>{{ app.petTipo }}</p>
+          <p>{{ app.service }} em {{ app.date }} às {{ app.time }}</p>
+          <p>Petshop: {{ app.shopName }}</p>
+        </ion-label>
+          <ion-button fill="clear" slot="end" (click)="removeAppointment(i)">
+      <ion-icon
+        slot="icon-only"
+        name="close-circle-outline"
+        style="color: #FF5733; font-size: 24px;">
+      </ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-card>
+  </div>
+
+  <ng-template #semDados>
+    <div class="sem-agendamentos">
+      <p>Nenhum agendamento encontrado.</p>
+    </div>
+  </ng-template>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <ion-button fill="clear" slot="start">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" slot="end" routerLink="/shop-list">
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

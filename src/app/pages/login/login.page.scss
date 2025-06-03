@@ -1,0 +1,73 @@
+
+ion-content {
+  --background: #ffffff;
+}
+
+
+.logo-container{
+    margin-top: 20px;
+}
+.login-container {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px 0;
+  box-sizing: border-box;
+ 
+}
+
+
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+
+ion-item {
+  --background: #D9D9D9;
+  --color:rgb(26, 26, 26); 
+  border-radius: 8px;
+}
+.input-outline {
+  --border-radius: 8px;
+  --background: #e0e0e0;
+  --border-color: rgb(26, 26, 26); ;  /* ou a cor que quiser */
+}
+
+ion-button {
+  --background: var(--ion-color-primary);
+  --color: #fff;
+}
+
+ion-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+}
+
+.login-button {
+  --background:  #ffffff;   /* cor de fundo */
+  --color:rgb(26, 26, 26);        /* cor do texto */
+}
+
+/* Botão de cadastrar clear */
+.register-button {
+   --background:  #ffffff;   /* cor de fundo */
+  --color:rgb(26, 26, 26);        /* cor do texto */
+}
+
+.bottom-bar {
+ --background: #57BEA6;     
+  height: 60px;              
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+

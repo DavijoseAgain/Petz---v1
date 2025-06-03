@@ -1,0 +1,88 @@
+:host {
+  ion-content {
+    --background: #ffffff;
+  }
+}
+
+.cadastrar-pet-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.pet-pic-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 16px 0;
+
+  .pet-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ccc;
+  }
+
+  .edit-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #fff;
+    border-radius: 50%;
+    padding: 6px;
+    cursor: pointer;
+
+    ion-icon {
+      font-size: 18px;
+      color: #57BEA6;
+    }
+  }
+}
+
+.info-card ion-card {
+  --background: #333;
+  color: #fff;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+ion-item {
+  --background: transparent;
+}
+
+ion-label,
+ion-select,
+ion-input,
+ion-textarea {
+  color: #fff !important;
+}
+
+.btn-ccc {
+  --background: #ccc;
+  color: #000;
+}
+
+.bottom-tabs {
+  --background: #57BEA6;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 0 16px;
+}
+
+ion-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+ion-icon {
+  font-size: 28px;
+  --ionicon-stroke-width: 56px;
+  color: #333;
+}

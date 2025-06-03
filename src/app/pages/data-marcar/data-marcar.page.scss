@@ -1,0 +1,78 @@
+/* src/app/pages/data-marcar/data-marcar.page.scss */
+:host {
+  ion-content {
+    --background: #ffffff;
+  }
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.shop-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+}
+
+.shop-info ion-avatar {
+  --size: 40px;
+  border-radius: 6px;
+}
+
+.prompt {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.dates-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.date-slot {
+  --background: #ffffff;
+  --color: #1a1a1a;
+  --border-color: #333;
+  --border-style: solid;
+  --border-width: 2px;
+  border-radius: 8px;
+  height: 60px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  --box-shadow: none;
+}
+
+.bottom-tabs {
+  --background: #57BEA6;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+ion-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+ion-icon {
+  font-size: 28px;
+  --ionicon-stroke-width: 56px;
+  color: #333;
+}

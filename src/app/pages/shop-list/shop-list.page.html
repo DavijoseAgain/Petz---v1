@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home" class="profile-button">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Petshops</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="shops-container">
+    <ion-item fill="outline" lines="none" class="input-outline">
+      <ion-icon name="search-outline" slot="start"></ion-icon>
+      <ion-input
+        [(ngModel)]="search"
+        (ionInput)="filter()"
+        placeholder="Buscar petshop..."
+      ></ion-input>
+    </ion-item>
+
+    <div class="shop-list">
+      <ion-item
+  *ngFor="let shop of filtered"
+  button
+  class="shop-item"
+  lines="none"
+  fill="solid"
+  (click)="select(shop)"
+>
+  <ion-avatar slot="start">
+    <ion-img [src]="shop.logo"></ion-img>
+  </ion-avatar>
+  <div class="shop-name">{{ shop.name }}</div>
+ 
+</ion-item>
+
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <!-- Slot "start" empurra para a esquerda -->
+    <ion-button fill="clear" slot="start" routerLink="/pet-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+
+    <!-- Slot padrão (sem slot) fica automaticamente no centro -->
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+
+    <!-- Slot "end" empurra para a direita -->
+    <ion-button fill="clear" slot="end" >
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

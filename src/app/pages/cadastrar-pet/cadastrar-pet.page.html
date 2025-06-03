@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+     <ion-button routerLink="/perfil">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Cadastrar Pet</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="cadastrar-pet-container">
+    <div class="pet-pic-wrapper">
+      <img
+        [src]="foto || 'assets/icon/avatar-placeholder.png'"
+        class="pet-placeholder"
+      />
+      <label class="edit-icon">
+        <ion-icon name="pencil-outline"></ion-icon>
+        <input type="file" hidden (change)="onImageSelected($event)" accept="image/*" />
+      </label>
+    </div>
+
+    <div class="info-card">
+      <ion-card>
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="stacked">Nome do pet:</ion-label>
+            <ion-input [(ngModel)]="nome" placeholder="Ex: Rex"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Idade:</ion-label>
+            <ion-input type="number" [(ngModel)]="idade" placeholder="Ex: 3"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Sexo:</ion-label>
+            <ion-select [(ngModel)]="sexo" placeholder="Selecione">
+              <ion-select-option value="Masculino">Masculino</ion-select-option>
+              <ion-select-option value="Feminino">Feminino</ion-select-option>
+              <ion-select-option value="Outro">Outro</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Descrição:</ion-label>
+            <ion-textarea rows="3" [(ngModel)]="descricao" placeholder="Alguma observação..."></ion-textarea>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-button
+      expand="block"
+      shape="round"
+      fill="solid"
+      class="btn-ccc"
+      (click)="salvarPet()"
+    >
+      SALVAR
+    </ion-button>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <ion-button fill="clear" slot="start" routerLink="/pet-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" slot="end" routerLink="/shop-list">
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

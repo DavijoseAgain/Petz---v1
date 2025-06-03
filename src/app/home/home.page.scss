@@ -1,27 +1,86 @@
-#container {
-  text-align: center;
+:host {
+  ion-content {
+    --background: #ffffff;
+  }
+}
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Botão de perfil (espaçamento, sem estilos do ícone aqui) */
+.profile-button {
+  /* Remove possíveis estilos conflitantes para ícone */
+  --background: transparent;
+  padding: 0;
+}
+
+/* Quando for usar a foto, garantir que ela fique circular e do tamanho do ícone */
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Se o icone padrão estiver sendo usado, manter o tamanho */
+.profile-button ion-icon {
+  font-size: 40px;
+  --ionicon-stroke-width: 80px;
+  color: #fff; /* Ou a cor que desejar para o ícone */
+}
+
+.welcome-card ion-card {
+  --background: #333;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.list-group {
+  margin-top: 24px;
+}
+
+.group {
+  margin-bottom: 16px;
+
+  h4 {
+    text-transform: lowercase;
+    margin-bottom: 8px;
+    color: #333;
+  }
+
+  ion-item {
+    --background: #333;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+
+  ion-avatar {
+    --size: 40px;
+    border-radius: 4px;
+  }
+}
+
+.bottom-tabs {
+  --background: #57BEA6;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 0 16px;
+}
+
+ion-icon {
+  font-size: 28px;
+  --ionicon-stroke-width: 56px;
+  color: #333;
+}
+
+ion-footer {
+  --background: #57BEA6;
   position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
 }

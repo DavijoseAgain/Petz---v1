@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="login-container">
+    <div class="logo-container">
+      <h2>Bem Vindo ao</h2>
+      <ion-img src="assets/icone_petz.png" alt="PetzPlace Logo"></ion-img>
+      <h3>PetzPlace</h3>
+    </div>
+    <form (ngSubmit)="register()">
+      <ion-item fill="outline" lines="none" class="input-outline">
+        <ion-input [(ngModel)]="usuario" name="usuario" placeholder="Usuário" required></ion-input>
+      </ion-item>
+      <ion-item fill="outline" lines="none" class="input-outline">
+        <ion-input [(ngModel)]="email" name="email" type="email" placeholder="Email" required></ion-input>
+      </ion-item>
+      <ion-item fill="outline" lines="none" class="input-outline">
+        <ion-input [(ngModel)]="senha" name="senha" type="password" placeholder="Senha" required></ion-input>
+      </ion-item>
+      <ion-item fill="outline" lines="none" class="input-outline">
+        <ion-input [(ngModel)]="confirmarSenha" name="confirmarSenha" type="password" placeholder="Confirmar senha" required></ion-input>
+      </ion-item>
+      <ion-button expand="block" fill="solid"  class="login-button" type="submit">Cadastrar‑se</ion-button>
+      <ion-button expand="block" fill="clear"  class="register-button" routerLink="/login">Login</ion-button>
+    </form>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-bar"></ion-toolbar>
+</ion-footer>

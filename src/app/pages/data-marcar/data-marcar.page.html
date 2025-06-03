@@ -1,0 +1,52 @@
+<!-- src/app/pages/data-marcar/data-marcar.page.html -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Data</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen style="--background: #ffffff;">
+  <div class="data-container">
+    <div class="shop-info">
+      <ion-avatar *ngIf="shopLogo" slot="start">
+        <ion-img [src]="shopLogo"></ion-img>
+      </ion-avatar>
+      {{ shopName }} – {{ service }}
+    </div>
+
+    <p class="prompt">Selecione a data:</p>
+
+    <div class="dates-grid">
+      <ion-button
+        *ngFor="let d of dates"
+        fill="outline"
+        class="date-slot"
+        (click)="selectDate(d)"
+      >
+        {{ d }}
+      </ion-button>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="bottom-tabs">
+    <ion-button fill="clear" slot="start" routerLink="/pet-list">
+      <ion-icon slot="icon-only" name="paw-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" routerLink="/home">
+      <ion-icon slot="icon-only" name="home-outline"></ion-icon>
+    </ion-button>
+    <ion-button fill="clear" slot="end" routerLink="/shop-list">
+      <ion-icon slot="icon-only" name="search-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

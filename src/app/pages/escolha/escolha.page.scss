@@ -1,0 +1,114 @@
+/* src/app/pages/escolha/escolha.page.scss */
+
+:host {
+  ion-content {
+    --background: #ffffff;
+  }
+}
+
+/* container geral da página */
+.escolha-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+  box-sizing: border-box;
+}
+
+/* mostra a petshop escolhida lá em cima (pode trocar por logo real) */
+.shop-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #333;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.shop-avatar {
+  --size: 40px;
+  border-radius: 4px;
+}
+
+.shop-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* texto “Selecione o PET que deseja:” */
+.prompt {
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* grid de cards */
+.pets-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 360px;
+}
+
+/* cada cartão escuro do PET */
+.pet-card {
+  --background: #333;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.pet-card ion-item {
+  --background: transparent;
+  --color: white;
+  min-height: 60px;
+  /* diminui padding interno para alinhar melhor */
+  --inner-padding-top: 4px;
+  --inner-padding-bottom: 4px;
+}
+
+/* imagem do pet */
+.pet-image {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 2px;   /* afasta um pouco da borda */
+  margin-top: -6px;    /* desce um pouco dentro do item */
+}
+
+/* texto dentro de cada card */
+.pet-card ion-label h2 {
+  font-size: 1.2rem;
+  margin-bottom: 4px;
+   margin-left: 12px; 
+}
+
+.pet-card ion-label p {
+  font-size: 0.9rem;
+  color: #aaa;
+   margin-left: 12px; 
+}
+
+/* footer igual às outras telas */
+.bottom-tabs {
+  --background: #57BEA6;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+ion-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+ion-icon {
+  font-size: 28px;
+  --ionicon-stroke-width: 56px;
+  color: #333;
+}

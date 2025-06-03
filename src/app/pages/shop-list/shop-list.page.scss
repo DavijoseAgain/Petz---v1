@@ -1,0 +1,103 @@
+:host {
+  ion-content {
+    --background: #ffffff;
+  }
+}
+
+/* Container geral */
+.shops-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 16px;
+}
+
+/* Campo de busca */
+.input-outline {
+  --background: #e0e0e0;
+  color: #333;
+  --border-radius: 8px;
+  --border-color: #1a1a1a;
+  margin-bottom: 16px;
+  
+  display: flex;
+  align-items: center;
+}
+
+
+.shop-list {
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Cada petshop */
+.shop-item {
+  /* empurra todo o conteúdo para baixo */
+  --inner-padding-top: 30px;
+  --inner-padding-bottom: 30px;
+
+  /* mantém o resto do seu estilo */
+  --background: #333;
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+
+/* Avatar maior */
+.shop-item ion-avatar {
+  --size: 56px;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+
+
+/* Nome do petshop */
+.shop-name {
+  font-size: 1.25rem;   /* antes era 1rem, agora fica maior */
+  font-weight: 200;     /* opcional: deixa um pouco mais destacado */
+}
+
+/* Header: perfil maior (opcional) */
+.profile-button ion-icon {
+  font-size: 32px;
+  --ionicon-stroke-width: 64px;
+}
+
+/* Footer igual às outras telas */
+.bottom-tabs {
+  --background: #57BEA6;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 0 16px;
+}
+
+ ion-icon {
+  font-size: 28px;
+  --ionicon-stroke-width: 56px;
+  color: #333;
+  
+}
+
+
+ion-footer {
+   --background: #57BEA6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+.center-button {
+  margin: 0 auto;
+}

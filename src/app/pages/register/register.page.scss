@@ -1,0 +1,66 @@
+/* src/app/pages/register/register.page.scss */
+:host {
+  ion-content {
+    --background: #ffffff;
+  }
+}
+
+.logo-container {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px 0;
+  box-sizing: border-box;
+}
+
+form {
+  width: 100%;
+  max-width: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ion-item {
+  --background: #D9D9D9;
+  --color: #1A1A1A;
+  border-radius: 8px;
+}
+
+.input-outline {
+  --border-radius: 8px;
+  --background: #e0e0e0;
+  --border-color: #1A1A1A;
+}
+
+.login-button {
+  --background: #ffffff;
+  --color:rgb(26, 26, 26);    
+  --box-shadow: none;
+}
+
+.register-button {
+  --background: #ffffff;
+  --color:rgb(26, 26, 26);    
+}
+
+ion-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.bottom-bar {
+  --background: #57BEA6;
+  height: 60px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
