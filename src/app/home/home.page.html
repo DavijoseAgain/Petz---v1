@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <!-- Se houver foto, exibe <img>; caso contrário, exibe o ícone padrão -->
+      
       <ion-button (click)="openProfile()" class="profile-button">
         <ng-container *ngIf="foto; else iconPadrao">
           <img [src]="foto" class="profile-avatar" />

@@ -27,7 +27,7 @@ export class CadastrarPetPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    // nada aqui por enquanto
+   
   }
 
   onImageSelected(event: any) {
